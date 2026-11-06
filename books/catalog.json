@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Flutter and Dart Fundamentals",
+    "subtitle": "Build Cross-Platform Mobile Apps, Step by Step",
+    "authors": "Shereef Abu Al-Maati",
+    "edition_publisher": "2026 · Apress",
+    "role": "Start with Dart, then move to Flutter. Clear language and programming foundations.",
+    "session_01_chapter": "Chapter 1: Introduction to Flutter and Dart",
+    "later_use": "Dart syntax, control flow, collections, functions and OOP",
+    "publisher_url": "https://link.springer.com/book/10.1007/979-8-8688-3068-6"
+  },
+  {
+    "title": "Flutter for Beginners",
+    "subtitle": "Fourth Edition",
+    "authors": "Thomas Bailey & Alessandro Biessek",
+    "edition_publisher": "4th ed. · 2026 · Packt",
+    "role": "A friendly explanation of what Flutter does and how widgets become applications.",
+    "session_01_chapter": "Chapter 1: What Is Flutter and Why Should I Use It?",
+    "later_use": "Dart fundamentals, widget-based UI, user interactions and state",
+    "publisher_url": "https://www.packtpub.com/en-us/product/flutter-for-beginners-9781805803652"
+  },
+  {
+    "title": "Flutter Cookbook",
+    "subtitle": "Third Edition",
+    "authors": "Simone Alessandria, Martino Yovo & Abu Anwar",
+    "edition_publisher": "3rd ed. · 2026 · Packt",
+    "role": "Short, focused recipes for setting up, building and troubleshooting apps.",
+    "session_01_chapter": "Chapter 1: Getting Started with Flutter",
+    "later_use": "Development tools, first app, reusable patterns and problem solving",
+    "publisher_url": "https://www.packtpub.com/en-us/product/flutter-cookbook-9781806385430"
+  },
+  {
+    "title": "Flutter Apprentice",
+    "subtitle": "Fourth Edition",
+    "authors": "Kodeco (Vincent Ngo, Stef Patterson, Alejandro Ulate Fallas & Kevin D. Moore)",
+    "edition_publisher": "4th ed. · 2024 · Kodeco",
+    "role": "Illustrated introductions to widgets, interface composition and app design.",
+    "session_01_chapter": "Chapter 1: Getting Started",
+    "later_use": "Widget composition, navigation and project-based examples",
+    "publisher_url": "https://assets.koenig.kodeco.com/books/flutter-apprentice"
+  }
+]

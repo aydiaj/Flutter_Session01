@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 345" role="img"><rect width="900" height="345" rx="18" fill="#F2F8FC"/>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="269" y="30" font-size="16" font-weight="bold" fill="#41667F">HOW PIECES FIT TOGETHER</text>
+<path d="M262 85V109M262 166V189M262 247V271M262 247V271" stroke="#73A5C7" stroke-width="3" fill="none"/>
+<rect x="145" y="43" width="234" height="44" rx="12" fill="#144F78"/><text x="262" y="71" fill="#FFF" font-size="17" font-weight="bold">App</text>
+<rect x="145" y="110" width="234" height="55" rx="12" fill="#D9EEFA" stroke="#78B2D4" stroke-width="2"/><text x="262" y="137" fill="#194F74" font-size="17" font-weight="bold">Screen</text><text x="262" y="154" fill="#47758D" font-size="12">contains a layout</text>
+<rect x="145" y="190" width="234" height="55" rx="12" fill="#DBF5EC" stroke="#79B7A3" stroke-width="2"/><text x="262" y="223" fill="#246957" font-size="17" font-weight="bold">Content layout</text>
+<path d="M262 245V264H157V270M262 264H371V270" fill="none" stroke="#73A5C7" stroke-width="3"/>
+<rect x="84" y="271" width="146" height="43" rx="11" fill="#FFF" stroke="#8EB5C6" stroke-width="2"/><text x="157" y="299" fill="#255B76" font-weight="bold" font-size="15">Greeting</text>
+<rect x="298" y="271" width="146" height="43" rx="11" fill="#FFF" stroke="#8EB5C6" stroke-width="2"/><text x="371" y="299" fill="#255B76" font-weight="bold" font-size="15">Button</text>
+<text x="689" y="30" fill="#41667F" font-weight="bold" font-size="16">WHAT THE USER SEES</text>
+<rect x="596" y="44" width="188" height="274" rx="29" fill="#1C374F"/><rect x="608" y="58" width="164" height="246" rx="17" fill="#FFFFFF"/>
+<rect x="608" y="58" width="164" height="57" rx="16" fill="#126A9D"/><rect x="608" y="98" width="164" height="17" fill="#126A9D"/><text x="690" y="91" fill="white" font-size="17" font-weight="bold">Welcome</text>
+<text x="690" y="172" font-size="17" fill="#28556F" font-weight="bold">Hello!</text><text x="690" y="195" font-size="11" fill="#718BA0">Let's explore.</text>
+<rect x="631" y="217" width="118" height="37" rx="10" fill="#2186BD"/><text x="690" y="241" font-size="13" fill="white" font-weight="bold">Continue</text>
+<text x="690" y="335" font-size="11" fill="#64849D">Illustration, not a running app</text></g></svg>

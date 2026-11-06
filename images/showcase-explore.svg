@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 240" role="img"><rect width="330" height="240" rx="18" fill="#F2F8FC"/><g font-family="Arial,Helvetica,sans-serif"><rect width="330" height="240" fill="#E5F5F5"/><path d="M0 30Q76 7 142 55T330 34V210Q206 186 123 231T0 197Z" fill="#C9E8DA"/>
+<path d="M0 105L130 78L236 113L330 90M40 0L99 240M195 0L247 240" stroke="#FFFFFF" stroke-width="24" fill="none" opacity=".85"/>
+<path d="M0 105L130 78L236 113L330 90M40 0L99 240M195 0L247 240" stroke="#B9D3CF" stroke-width="2" fill="none"/>
+<rect x="68" y="18" width="194" height="210" rx="22" fill="#223F53" opacity=".93"/><rect x="76" y="27" width="178" height="193" rx="14" fill="#D8F1EA"/>
+<path d="M76 100L254 83M120 27L148 219M220 27L185 220" stroke="#FFFFFF" stroke-width="15"/>
+<path d="M95 159C118 114 170 160 205 94" fill="none" stroke="#2B91D1" stroke-width="6" stroke-linecap="round" stroke-dasharray="7 5"/>
+<circle cx="95" cy="159" r="9" fill="#2382B8" stroke="#FFFFFF" stroke-width="3"/><circle cx="205" cy="94" r="9" fill="#EF7468" stroke="#FFFFFF" stroke-width="3"/>
+<rect x="85" y="37" width="161" height="32" rx="9" fill="#FFFFFF"/><text x="166" y="58" font-size="12" font-weight="bold" fill="#3B6572" text-anchor="middle">Explore places</text></g></svg>

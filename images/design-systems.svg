@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 285" role="img"><rect width="900" height="285" rx="18" fill="#F2F8FC"/>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="450" y="25" font-size="14" fill="#506E83" font-weight="bold">CHOOSE THE APP'S VISUAL LANGUAGE</text>
+<rect x="35" y="43" width="262" height="63" rx="14" fill="#DDEBFB" stroke="#9DBCE3" stroke-width="2"/><text x="166" y="68" font-size="19" fill="#245A8D" font-weight="bold">Material 3</text><text x="166" y="89" font-size="12" fill="#567D9D">Google-inspired</text>
+<rect x="319" y="43" width="262" height="63" rx="14" fill="#ECE9FB" stroke="#B5AADD" stroke-width="2"/><text x="450" y="68" font-size="19" fill="#64529A" font-weight="bold">Cupertino</text><text x="450" y="89" font-size="12" fill="#8273A8">Apple-inspired</text>
+<rect x="603" y="43" width="262" height="63" rx="14" fill="#DFF5E9" stroke="#8BC2A4" stroke-width="2"/><text x="734" y="68" font-size="19" fill="#246F51" font-weight="bold">Custom style</text><text x="734" y="89" font-size="12" fill="#528A75">Your own UI design</text>
+<path d="M166 106V126H450M450 106V126M734 106V126H450M450 126V145" stroke="#61A4B0" stroke-width="3" fill="none"/>
+<rect x="171" y="145" width="558" height="54" rx="13" fill="#CBE9FA" stroke="#75B1D1" stroke-width="2"/><text x="450" y="169" font-size="19" fill="#19567D" font-weight="bold">Flutter core widgets</text><text x="450" y="187" font-size="12" fill="#42748E">Shared building blocks and layout behavior</text>
+<path d="M450 199V216" stroke="#61A4B0" stroke-width="3"/>
+<rect x="171" y="216" width="558" height="48" rx="13" fill="#DBE6EF" stroke="#9AB1C4" stroke-width="2"/><text x="450" y="236" font-size="17" fill="#345773" font-weight="bold">Flutter engine &amp; device platform</text><text x="450" y="254" font-size="11" fill="#678095">Render the interface and connect to the operating system</text></g></svg>

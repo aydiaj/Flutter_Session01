@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" role="img"><rect width="900" height="270" rx="18" fill="#F2F8FC"/>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><rect x="28" y="26" width="405" height="213" rx="15" fill="#fff" stroke="#CBDDEB"/>
+<rect x="467" y="26" width="405" height="213" rx="15" fill="#fff" stroke="#A8D5C9"/>
+<text x="230" y="56" font-size="20" font-weight="bold" fill="#365F7D">Separate native projects</text>
+<text x="671" y="56" font-size="20" font-weight="bold" fill="#266B59">Shared Flutter project</text>
+<rect x="54" y="80" width="155" height="57" rx="10" fill="#D7E8FC"/><text x="131" y="103" font-size="15" fill="#245985" font-weight="bold">Android project</text><text x="131" y="123" font-size="12" fill="#587E9D">Kotlin / Java</text>
+<rect x="250" y="80" width="155" height="57" rx="10" fill="#E9E1FA"/><text x="327" y="103" font-size="15" fill="#5A4B88" font-weight="bold">iOS project</text><text x="327" y="123" font-size="12" fill="#786A9F">Swift</text>
+<path d="M131 137V171M327 137V171" stroke="#84A4BD" stroke-width="3"/>
+<rect x="70" y="171" width="122" height="42" rx="9" fill="#E6F0F8"/><text x="131" y="197" font-size="15" fill="#305E7A">Android app</text>
+<rect x="266" y="171" width="122" height="42" rx="9" fill="#F0EAF9"/><text x="327" y="197" font-size="15" fill="#685485">iOS app</text>
+<rect x="558" y="80" width="226" height="56" rx="11" fill="#DDF5EA" stroke="#98D5B8"/><text x="671" y="103" font-size="17" font-weight="bold" fill="#25664C">Flutter + Dart</text><text x="671" y="123" font-size="12" fill="#587D6C">Shared app code</text>
+<path d="M671 136V153H574V174M671 153H768V174" fill="none" stroke="#78B3A5" stroke-width="3"/>
+<rect x="507" y="174" width="135" height="40" rx="9" fill="#D7E8FC"/><text x="574" y="198" font-size="14" fill="#245985">Android app</text>
+<rect x="701" y="174" width="135" height="40" rx="9" fill="#E9E1FA"/><text x="768" y="198" font-size="14" fill="#5A4B88">iOS app</text>
+<text x="450" y="260" fill="#54758C" font-size="12">Both approaches still require platform testing and build tools</text></g></svg>
