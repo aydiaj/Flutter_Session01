@@ -58,7 +58,7 @@ This static site does not send answers anywhere. Completion is saved only to thi
 The Dart and Flutter mascot appears in an original student-friendly profile illustration in Section 3. The profile links to current official documentation, DartPad, the official Flutter YouTube channel, samples, community resources, and the package directory. Links require internet; all lesson content and local illustrations remain available offline. The class illustration is not an official Flutter avatar.
 
 
-## Course books (Syllabus / Section 07)
+## Course books
 
 The lesson now introduces all four approved course books with visually designed cards, author and edition details, how each book supports the course, a first-session chapter, and official publisher links. It also includes a downloadable copy of the course plan.
 
