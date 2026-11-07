@@ -748,7 +748,198 @@
 <div class="book-reading-path"><div aria-hidden="true" class="book-reading-icon">✦</div><div><strong>How to use these resources</strong><p><b>Today:</b> only explore the four book titles and the introductory chapters listed above—no reading or submission is required. <b>Later:</b> follow the chapter references in each Codelab, then check the official Flutter and Dart documentation for current APIs and tooling. Some publisher pages may require access or purchase.</p></div></div>
 <div class="book-outline-link"><a download="" href="resources/Flutter_Plan_26-27.pdf" rel="noopener noreferrer" target="_blank">Download the official course outline (PDF) <span aria-hidden="true">↓</span></a><span>Includes course objectives, schedule, grading, and reading references.</span></div>
 </div><h2>How your work is assessed</h2><p class="body-intro">The components below total <strong>100 marks</strong>. Details follow the published SICT235 course plan.</p>
-<div aria-label="Grading distribution totaling 100 marks" class="assessment-list"><div class="grade-row"><span>Assignments &amp; labs</span><div class="grade-track"><div style="width:20%"></div></div><strong>20</strong></div><div class="grade-row"><span>Quizzes &amp; attendance</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Interviews &amp; orals</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Project</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Mid-exam</span><div class="grade-track"><div style="width:20%"></div></div><strong>20</strong></div><div class="grade-row"><span>Final exam</span><div class="grade-track"><div style="width:30%"></div></div><strong>30</strong></div></div>
+  
+<!-- CUMULATIVE ASSESSMENT DISTRIBUTION -->
+<style>
+.assessment-cumulative {
+  display: grid;
+  gap: 17px;
+  margin: 24px 0;
+}
+
+.assessment-cumulative .grade-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.4fr) minmax(120px, 2.5fr) 40px;
+  align-items: center;
+  gap: 14px;
+  font-size: .87rem;
+}
+
+.assessment-cumulative .grade-row > span {
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.assessment-cumulative .grade-row > strong {
+  text-align: right;
+  font-size: 1rem;
+  color: var(--mark-color);
+}
+
+.assessment-cumulative .grade-track {
+  display: flex;
+  width: 100%;
+  height: 15px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--line);
+}
+
+.assessment-cumulative .grade-track > .seg {
+  display: block;
+  flex: 0 0 var(--weight);
+  width: var(--weight);
+  height: 100%;
+  border-radius: 0;
+  background: var(--segment-color);
+}
+
+.assessment-cumulative .seg:first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+/* Each color represents its own marks out of 100 */
+.assessment-cumulative .seg-assignments {
+  --weight: 20%;
+  --segment-color: #1789c1;
+}
+
+.assessment-cumulative .seg-quizzes {
+  --weight: 10%;
+  --segment-color: #22ad9d;
+}
+
+.assessment-cumulative .seg-interviews {
+  --weight: 10%;
+  --segment-color: #8e69d4;
+}
+
+.assessment-cumulative .seg-project {
+  --weight: 10%;
+  --segment-color: #f0a24a;
+}
+
+.assessment-cumulative .seg-mid {
+  --weight: 20%;
+  --segment-color: #df7196;
+}
+
+.assessment-cumulative .seg-final {
+  --weight: 30%;
+  --segment-color: #476cc5;
+}
+
+.assessment-cumulative .assessment-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.assessment-cumulative .assessment-total strong {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .assessment-cumulative .grade-row {
+    grid-template-columns: minmax(110px, 1.3fr) minmax(90px, 1fr) 28px;
+    gap: 8px;
+    font-size: .74rem;
+  }
+
+  .assessment-cumulative .grade-track {
+    height: 13px;
+  }
+
+  .assessment-cumulative .grade-row > strong {
+    font-size: .83rem;
+  }
+}
+</style>
+
+<div class="assessment-list assessment-cumulative"
+     aria-label="Cumulative grading distribution totaling 100 marks">
+
+  <!-- 20 / 100 -->
+  <div class="grade-row" style="--mark-color:#1789c1">
+    <span>Assignments &amp; labs</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 20 of 100">
+      <span class="seg seg-assignments"></span>
+    </div>
+    <strong>20</strong>
+  </div>
+
+  <!-- 30 / 100 -->
+  <div class="grade-row" style="--mark-color:#22ad9d">
+    <span>Quizzes &amp; attendance</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 30 of 100">
+      <span class="seg seg-assignments"></span>
+      <span class="seg seg-quizzes"></span>
+    </div>
+    <strong>10</strong>
+  </div>
+
+  <!-- 40 / 100 -->
+  <div class="grade-row" style="--mark-color:#8e69d4">
+    <span>Interviews &amp; orals</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 40 of 100">
+      <span class="seg seg-assignments"></span>
+      <span class="seg seg-quizzes"></span>
+      <span class="seg seg-interviews"></span>
+    </div>
+    <strong>10</strong>
+  </div>
+
+  <!-- 50 / 100 -->
+  <div class="grade-row" style="--mark-color:#f0a24a">
+    <span>Project</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 50 of 100">
+      <span class="seg seg-assignments"></span>
+      <span class="seg seg-quizzes"></span>
+      <span class="seg seg-interviews"></span>
+      <span class="seg seg-project"></span>
+    </div>
+    <strong>10</strong>
+  </div>
+
+  <!-- 70 / 100 -->
+  <div class="grade-row" style="--mark-color:#df7196">
+    <span>Mid-exam</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 70 of 100">
+      <span class="seg seg-assignments"></span>
+      <span class="seg seg-quizzes"></span>
+      <span class="seg seg-interviews"></span>
+      <span class="seg seg-project"></span>
+      <span class="seg seg-mid"></span>
+    </div>
+    <strong>20</strong>
+  </div>
+
+  <!-- 100 / 100 -->
+  <div class="grade-row" style="--mark-color:#476cc5">
+    <span>Final exam</span>
+    <div class="grade-track" role="img" aria-label="Cumulative: 100 of 100">
+      <span class="seg seg-assignments"></span>
+      <span class="seg seg-quizzes"></span>
+      <span class="seg seg-interviews"></span>
+      <span class="seg seg-project"></span>
+      <span class="seg seg-mid"></span>
+      <span class="seg seg-final"></span>
+    </div>
+    <strong>30</strong>
+  </div>
+
+  <div class="assessment-total">
+    <span>Total Course Marks</span>
+    <strong>100 / 100</strong>
+  </div>
+
+</div>
+<!-- END ASSESSMENT DISTRIBUTION -->
+
+<!--<div aria-label="Grading distribution totaling 100 marks" class="assessment-list"><div class="grade-row"><span>Assignments &amp; labs</span><div class="grade-track"><div style="width:20%"></div></div><strong>20</strong></div><div class="grade-row"><span>Quizzes &amp; attendance</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Interviews &amp; orals</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Project</span><div class="grade-track"><div style="width:10%"></div></div><strong>10</strong></div><div class="grade-row"><span>Mid-exam</span><div class="grade-track"><div style="width:20%"></div></div><strong>20</strong></div><div class="grade-row"><span>Final exam</span><div class="grade-track"><div style="width:30%"></div></div><strong>30</strong></div></div>-->
 <p class="microcopy">3 sessions per teaching week · 2 hours per session · OOP and Web Development/Design are prerequisites.</p>
 <div class="note"><span aria-hidden="true" class="note-icon">✦</span><div><strong>Learning format</strong><p>Guided blended learning, live coding in later sessions, independent practice, debugging, documentation, code reviews, and individual feedback.</p></div></div>
 </section>
