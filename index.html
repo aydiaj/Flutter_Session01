@@ -154,6 +154,350 @@
 <div class="step-meta"><span class="eyebrow">SECTION 06 · DEVELOPMENT WORKFLOW</span><span class="time-tag">◷ 10 MIN</span></div><h1 id="section-5-title">An idea becomes an app<br/><em>one step at a time.</em></h1><p class="lead">App development is iterative. Developers create a version, test it, learn from what happens, and make improvements.</p>
 <div class="diagram-frame"><img alt="Iterative workflow: Plan, Sketch, Build, Test, Improve, Deliver, with a loop returning from Improve to Build" height="255" src="images/app-workflow.svg" width="900"/></div>
 <div class="workflow-blurbs"><div><span>01</span><strong>Plan</strong><p>Identify the user and the task.</p></div><div><span>02</span><strong>Design</strong><p>Sketch how the screen should work.</p></div><div><span>03</span><strong>Build</strong><p>Write the Dart and Flutter code.</p></div><div><span>04</span><strong>Test &amp; improve</strong><p>Check behavior and fix problems.</p></div></div>
+
+<!-- FROM WEB DEVELOPMENT TO FLUTTER -->
+<style>
+  .web-flutter-bridge {
+    margin: 30px 0;
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+  }
+
+  .web-flutter-bridge .bridge-kicker {
+    display: block;
+    color: var(--accent2);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    margin-bottom: 10px;
+  }
+
+  .web-flutter-bridge h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+  }
+
+  .web-flutter-bridge .bridge-intro {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .web-flutter-bridge .bridge-map {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .web-flutter-bridge .bridge-item {
+    padding: 17px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper2);
+    border-radius: 14px;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .web-flutter-bridge .bridge-source {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 850;
+    color: var(--accent);
+  }
+
+  .web-flutter-bridge .bridge-arrow {
+    display: block;
+    color: var(--accent2);
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .web-flutter-bridge .bridge-item strong {
+    display: block;
+    font-size: .95rem;
+  }
+
+  .web-flutter-bridge .bridge-item p {
+    font-size: .8rem;
+    color: var(--muted);
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+
+  .web-flutter-bridge .bridge-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .web-flutter-bridge .bridge-example {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 15px;
+    min-width: 0;
+    background: var(--paper2);
+  }
+
+  .web-flutter-bridge .bridge-example h3 {
+    font-size: .95rem;
+    margin: 0 0 12px;
+  }
+
+  .web-flutter-bridge .bridge-preview {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    color: #182a3c;
+    border: 1px solid #dae4ec;
+  }
+
+  .web-flutter-bridge .bridge-browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #edf2f7;
+    padding: 10px 12px;
+  }
+
+  .web-flutter-bridge .bridge-browser-bar i {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #a8b8c6;
+    border-radius: 50%;
+  }
+
+  .web-flutter-bridge .bridge-browser-bar small {
+    margin-left: auto;
+    color: #65798a;
+    font-size: .65rem;
+  }
+
+  .web-flutter-bridge .bridge-app-bar {
+    padding: 12px 15px;
+    background: #176ba8;
+    color: white;
+    font-size: .85rem;
+    font-weight: 750;
+  }
+
+  .web-flutter-bridge .bridge-preview-body {
+    padding: 24px 14px;
+    text-align: center;
+  }
+
+  .web-flutter-bridge .bridge-preview-body strong {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .web-flutter-bridge .bridge-preview-body p {
+    margin: 8px 0 15px;
+    color: #65798a;
+    font-size: .78rem;
+  }
+
+  .web-flutter-bridge .bridge-fake-button {
+    display: inline-block;
+    padding: 9px 22px;
+    background: #1675ba;
+    color: white;
+    border-radius: 8px;
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  .web-flutter-bridge .bridge-note {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: .8rem;
+    line-height: 1.65;
+  }
+
+  .web-flutter-bridge .bridge-takeaway {
+    margin-top: 20px;
+    padding: 16px 18px;
+    background: var(--pale);
+    border-radius: 12px;
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: .88rem;
+  }
+
+  .web-flutter-bridge .bridge-question {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--line);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 700px) {
+    .web-flutter-bridge {
+      padding: 18px;
+    }
+
+    .web-flutter-bridge .bridge-map,
+    .web-flutter-bridge .bridge-comparison {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="web-flutter-bridge">
+
+  <span class="bridge-kicker">
+    CONNECT TO WHAT YOU ALREADY KNOW
+  </span>
+
+  <h2>From Web Development to Flutter</h2>
+
+  <p class="bridge-intro">
+    You've already built websites using
+    <strong>HTML, CSS, and JavaScript.</strong>
+    Great news! Many of the ideas you've learned
+    will help you understand Flutter.
+    The concepts are familiar, but the tools are different.
+  </p>
+
+  <!-- CONCEPT MAPPING -->
+  <div class="bridge-map">
+
+    <div class="bridge-item">
+      <span class="bridge-source">HTML</span>
+      <small>Structure &amp; content</small>
+      <span class="bridge-arrow" aria-hidden="true">↓</span>
+      <strong>Flutter Widgets</strong>
+      <p>
+        Build an interface from components
+        such as Text, Image, Row, and Column.
+      </p>
+    </div>
+
+    <div class="bridge-item">
+      <span class="bridge-source">CSS</span>
+      <small>Appearance &amp; layout</small>
+      <span class="bridge-arrow" aria-hidden="true">↓</span>
+      <strong>Properties &amp; Themes</strong>
+      <p>
+        Define colors, spacing, typography,
+        and layout using widget properties
+        and themes.
+      </p>
+    </div>
+
+    <div class="bridge-item">
+      <span class="bridge-source">JavaScript</span>
+      <small>Logic &amp; interaction</small>
+      <span class="bridge-arrow" aria-hidden="true">↓</span>
+      <strong>Dart</strong>
+      <p>
+        Respond to user actions, process data,
+        and update the application's interface.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- VISUAL COMPARISON -->
+  <h3 style="margin:28px 0 8px">
+    One Interface, Two Approaches
+  </h3>
+
+  <p class="bridge-intro" style="margin-bottom:14px">
+    Imagine creating a simple welcome screen.
+    Both approaches can produce a similar result.
+    What changes is how we build it.
+  </p>
+
+  <div class="bridge-comparison">
+
+    <!-- WEB EXAMPLE -->
+    <div class="bridge-example">
+      <h3>🌐 Web Development</h3>
+
+      <div class="bridge-preview">
+        <div class="bridge-browser-bar">
+          <i></i><i></i><i></i>
+          <small>Welcome Page</small>
+        </div>
+
+        <div class="bridge-preview-body">
+          <strong>Welcome, Student!</strong>
+          <p>Ready to start learning?</p>
+          <span class="bridge-fake-button">
+            Get Started
+          </span>
+        </div>
+      </div>
+
+      <p class="bridge-note">
+        <strong>HTML</strong> defines the elements.
+        <strong>CSS</strong> styles them.
+        <strong>JavaScript</strong> can handle interactions.
+        The browser renders the page.
+      </p>
+    </div>
+
+    <!-- FLUTTER EXAMPLE -->
+    <div class="bridge-example">
+      <h3>📱 Flutter Development</h3>
+
+      <div class="bridge-preview">
+        <div class="bridge-app-bar">
+          Welcome App
+        </div>
+
+        <div class="bridge-preview-body">
+          <strong>Welcome, Student!</strong>
+          <p>Ready to start learning?</p>
+          <span class="bridge-fake-button">
+            Get Started
+          </span>
+        </div>
+      </div>
+
+      <p class="bridge-note">
+        <strong>Dart</strong> describes the interface
+        using <strong>Flutter widgets</strong>.
+        Widget properties control appearance,
+        while Dart also implements behavior.
+        Flutter renders the interface.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- KEY TAKEAWAY -->
+  <div class="bridge-takeaway">
+    <strong>Same ideas. A different toolkit.</strong>
+    <p style="margin:7px 0 0">
+      In web development, HTML, CSS, and JavaScript
+      work together. In Flutter, Dart and widgets
+      express structure, appearance, and behavior.
+      These are conceptual connections, not exact
+      one-to-one equivalents. Flutter can also
+      target the web!
+    </p>
+  </div>
+
+  <!-- NO-CODE DISCUSSION -->
+  <div class="bridge-question">
+    <strong>Think about it:</strong>
+    If we wanted to change the button's color,
+    what would we normally use in web development?
+    What might control that appearance in Flutter?
+    <p class="microcopy">
+      Class discussion only — no coding required.
+      Both previews are illustrative, not running apps.
+    </p>
+  </div>
+
+</div>
+<!-- END WEB DEVELOPMENT → FLUTTER BRIDGE -->
+
 <div class="mini-simulation"><div><span class="micro-label">INTERACTIVE CONCEPT DEMO</span><h3>See how a UI change feels</h3><p>Flutter supports hot reload during development, helping developers see many code changes without restarting the entire app. Try an illustrative color change below.</p><button class="primary mini-demo-button" id="simulateChange" type="button">Simulate a color change <span aria-hidden="true">↻</span></button><p class="microcopy">Simulation only — this page is not running Flutter or demonstrating actual hot reload timing.</p></div><div aria-label="Preview panel" class="demo-tiles"><div class="demo-tile-top">Example app</div><div class="demo-tile-body"><div class="demo-tile-circle"></div><p>Welcome back!</p><div class="demo-tile-action" id="colorDemo">Continue</div></div></div></div>
 <div class="note"><span aria-hidden="true" class="note-icon">↗</span><div><strong>Looking ahead</strong><p>In the next sessions, you'll install your tools, practice Dart, then run an actual Flutter app. Today's preview is conceptual only.</p></div></div>
 </section>
