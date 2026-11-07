@@ -82,6 +82,189 @@
 <div class="step-meta"><span class="eyebrow">SECTION 03 · THE TOOLS</span><span class="time-tag">◷ 15 MIN</span></div><h1 id="section-2-title">Dart is the language.<br/><em>Flutter is the toolkit.</em></h1><p class="lead">They work together, but they are not the same thing. Knowing the difference makes the rest of the course easier to follow.</p>
 <div class="diagram-frame"><img alt="Dart source code and Flutter framework combine to build a user interface for several platforms" height="290" src="images/dart-flutter-flow.svg" width="900"/><p class="diagram-caption">Conceptual illustration · A developer writes Dart code and uses Flutter APIs to describe the app's UI.</p></div>
 <div class="compare-grid"><div class="compare-card dart"><div class="compare-head"><span class="symbol">D</span><div><span class="micro-label">PROGRAMMING LANGUAGE</span><h3>Dart</h3></div></div><p>The language used to write an app's logic, variables, functions, objects, and Flutter UI code.</p><div class="tag-list"><span>Syntax</span><span>Data</span><span>Functions</span></div></div><div class="compare-card flutter"><div class="compare-head"><span class="symbol">F</span><div><span class="micro-label">UI FRAMEWORK + SDK</span><h3>Flutter</h3></div></div><p>An open-source UI toolkit and SDK, providing core widgets, rendering, and development tools for multiple platforms.</p><div class="tag-list"><span>Widgets</span><span>Layout</span><span>UI tools</span></div></div></div>
+<!-- BEGIN: why-dart-title -->
+<section aria-labelledby="why-dart-title" class="orientation-enrich">
+ <span class="enrich-label">
+  WHY THIS LANGUAGE?
+ </span>
+ <h2 id="why-dart-title">
+  Why did Flutter choose Dart?
+ </h2>
+ <p class="enrich-lead">
+  Dart was selected to combine a fast development workflow with efficient apps and expressive UI code. Each reason below is a short teaching point&mdash;not a coding task.
+ </p>
+ <div class="enrich-grid">
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    01
+   </span>
+   <h3>
+    Flexible compilation: JIT &amp; AOT
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     <strong>
+      JIT
+     </strong>
+     supports fast feedback and hot reload while developing.
+    </li>
+    <li>
+     <strong>
+      AOT
+     </strong>
+     compiles native release code before launch for efficient execution.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    02
+   </span>
+   <h3>
+    High-performance execution
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Native release apps compile to machine code, supporting quick startup and responsiveness.
+    </li>
+    <li>
+     Flutter does not need a JavaScript-to-native bridge just to draw its main UI.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    03
+   </span>
+   <h3>
+    Automatic garbage collection
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Dart manages memory for short-lived objects created during UI updates.
+    </li>
+    <li>
+     Developers spend less effort manually releasing objects and more on app behavior.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    04
+   </span>
+   <h3>
+    Approachable, modern OOP
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Familiar syntax includes classes, objects, functions and collections.
+    </li>
+    <li>
+     Modern language improvements, an active community and clear documentation help learning.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    05
+   </span>
+   <h3>
+    Types and safer null handling
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Static types can catch many mistakes before an app is run.
+    </li>
+    <li>
+     Null safety and null-aware operators make missing values more explicit.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    06
+   </span>
+   <h3>
+    Declarative interface building
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Widgets act as lightweight, immutable descriptions of the screen.
+    </li>
+    <li>
+     When state changes, Flutter rebuilds the affected UI description instead of manually editing each element.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    07
+   </span>
+   <h3>
+    Layout, styling &amp; logic in Dart
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Widget composition and properties describe layout, appearance and behavior using Dart.
+    </li>
+    <li>
+     Compared with HTML + CSS + JavaScript, there is less switching between different syntaxes; Flutter also provides layout-debugging tools.
+    </li>
+   </ul>
+  </article>
+ </div>
+ <div aria-label="Illustration showing how one Dart source supports different development and release compilation modes" class="enrich-visual" role="group">
+  <div class="dart-compile-flow">
+   <div class="dart-source-tag">
+    DART SOURCE
+    <br/>
+    <small>
+     Same language
+    </small>
+   </div>
+   <div class="dart-lanes">
+    <div class="dart-lane">
+     <strong>
+      During development
+     </strong>
+     <span>
+      JIT &rarr; quick iteration
+     </span>
+     <small>
+      Change code, hot reload, keep working.
+     </small>
+    </div>
+    <div class="dart-lane">
+     <strong>
+      Native release build
+     </strong>
+     <span>
+      AOT &rarr; machine code
+     </span>
+     <small>
+      Optimized executable for supported native targets.
+     </small>
+    </div>
+   </div>
+  </div>
+  <p class="enrich-visual-caption">
+   Conceptual view: web targets have their own compilation pipeline, including JavaScript and WebAssembly. We will study the technical details later.
+  </p>
+ </div>
+ <p class="enrich-source">
+  Further reading:
+  <a href="https://dart.dev/overview" rel="noopener noreferrer" target="_blank">
+   Dart overview
+  </a>
+  &middot;
+  <a href="https://dart.dev/null-safety" rel="noopener noreferrer" target="_blank">
+   Sound null safety
+  </a>
+ </p>
+</section>
+
+<!-- END: why-dart-title -->
+
 <div class="dash-intro"><span aria-hidden="true">✦</span><div><strong>Meet your Flutter study buddy.</strong><p>Flutter and Dart share an official mascot called <strong>Dash</strong>. Her profile below is our playful directory of trusted learning resources. No accounts or sign-ups needed today.</p></div></div>
 <div aria-label="Dash, official Flutter and Dart mascot, illustrated as a classroom study guide" class="dash-profile" id="dash-profile">
 <div class="dash-profile-top"><div class="dash-profile-cover"><span>STUDENT GUIDE · SICT235</span><span>BUILD · LEARN · EXPLORE</span></div>
@@ -123,7 +306,191 @@
 <!-- SECTION 04 -->
 <section aria-labelledby="section-3-title" class="lesson-step" data-panel="3" hidden="">
 <div class="step-meta"><span class="eyebrow">SECTION 04 · APP TARGETS</span><span class="time-tag">◷ 10 MIN</span></div><h1 id="section-3-title">Native or <em>cross-platform?</em></h1><p class="lead">Traditionally, Android and iOS apps may be developed as separate projects. Flutter can reuse much of one Dart codebase across several platforms, while platform-specific tools and adaptations are still sometimes needed.</p>
-<div class="diagram-frame"><img alt="Left: two separate projects for Android and iOS. Right: one shared Flutter project targeting both, with platform-specific finishing steps." height="270" src="images/native-vs-cross.svg" width="900"/><p class="diagram-caption">Conceptual comparison: shared code reduces duplication but does not remove platform requirements.</p></div><div class="platforms"><div class="platform-card"><span aria-hidden="true" class="platform-icon">▯</span><h3>Android</h3><p>Mobile apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">◉</span><h3>iOS</h3><p>Mobile apps</p></div><div class="platform-card emphasized"><span aria-hidden="true" class="platform-icon">⌘</span><h3>Web</h3><p>Browser apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">▦</span><h3>Windows</h3><p>Desktop apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">▤</span><h3>macOS</h3><p>Desktop apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">⌁</span><h3>Linux</h3><p>Desktop apps</p></div></div>
+<div class="diagram-frame"><img alt="Left: two separate projects for Android and iOS. Right: one shared Flutter project targeting both, with platform-specific finishing steps." height="270" src="images/native-vs-cross.svg" width="900"/><p class="diagram-caption">Conceptual comparison: shared code reduces duplication but does not remove platform requirements.</p></div>
+<!-- BEGIN: why-flutter-title -->
+<section aria-labelledby="why-flutter-title" class="orientation-enrich">
+ <span class="enrich-label">
+  THE REASONS BEHIND THE TOOLKIT
+ </span>
+ <h2 id="why-flutter-title">
+  Why choose Flutter?
+ </h2>
+ <p class="enrich-lead">
+  The value of Flutter goes beyond one codebase. These points cover development costs, consistency, community, performance and native integration.
+ </p>
+ <div class="flutter-benefit-grid">
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    01
+   </span>
+   <h3>
+    One shared codebase
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Reuse much of the same Dart application across Android, iOS, web and desktop.
+    </li>
+    <li>
+     Platform-specific setup or code may still be necessary for some features.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    02
+   </span>
+   <h3>
+    Fewer languages to learn
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Avoid rebuilding the same features separately in several platform languages.
+    </li>
+    <li>
+     Teams can share knowledge and spend less time switching between toolchains.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    03
+   </span>
+   <h3>
+    Lower cost, shorter cycles
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Shared development reduces duplicated work and coordination across separate teams.
+    </li>
+    <li>
+     Deliver fixes and new features across targets with a more coordinated schedule.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    04
+   </span>
+   <h3>
+    More consistent maintenance
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Shared logic helps avoid mismatched features and repeated bugs.
+    </li>
+    <li>
+     A common codebase makes updates and troubleshooting easier to coordinate.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    05
+   </span>
+   <h3>
+    Google-backed &amp; open source
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Flutter was created by Google and is developed in the open.
+    </li>
+    <li>
+     Community contributors help shape the framework alongside its maintainers.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    06
+   </span>
+   <h3>
+    An active contributor ecosystem
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Contributors improve code, fix bugs and refine documentation.
+    </li>
+    <li>
+     They share examples, educational resources, feedback and reusable packages.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    07
+   </span>
+   <h3>
+    High-performance rendering
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Flutter draws its own widgets rather than wrapping a web page inside a native app.
+    </li>
+    <li>
+     Its rendering pipeline and native compilation aim for fluid, responsive interfaces; actual results depend on the app and device.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    08
+   </span>
+   <h3>
+    Native integration &amp; future reach
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Platform channels and plugins connect Flutter in both directions with native code, including cameras, sensors and storage.
+    </li>
+    <li>
+     Flutter views can join existing native apps; specialized embedders reach additional devices, though not every OS is officially supported.
+    </li>
+   </ul>
+  </article>
+ </div>
+ <div aria-label="Illustrative one shared Flutter codebase reused across mobile, web and desktop targets" class="enrich-visual" role="group">
+  <div class="flutter-platform-flow">
+   <span class="flutter-code-pill">
+    One Flutter project
+   </span>
+   <span aria-hidden="true" class="flutter-flow-arrow">
+    &rarr;
+   </span>
+   <span class="flutter-platform-pill">
+    📱 Mobile
+   </span>
+   <span class="flutter-platform-pill">
+    🌐 Web
+   </span>
+   <span class="flutter-platform-pill">
+    ▣ Desktop
+   </span>
+  </div>
+  <p class="enrich-visual-caption">
+   Shared project, multiple destinations. Platform-specific setup and adjustments may still be necessary.
+  </p>
+ </div>
+ <p class="flutter-possibility-note">
+  <strong>
+   Looking ahead:
+  </strong>
+  Flutter can be embedded in smart displays, vehicle interfaces and other custom systems. This is a possibility&mdash;not a promise that watchOS or every smartwatch is an officially supported Flutter target.
+ </p>
+ <p class="enrich-source">
+  Further reading:
+  <a href="https://docs.flutter.dev/resources/faq" rel="noopener noreferrer" target="_blank">
+   Official Flutter FAQ
+  </a>
+  &middot;
+  <a href="https://docs.flutter.dev/embedded" rel="noopener noreferrer" target="_blank">
+   Embedded Flutter
+  </a>
+ </p>
+</section>
+
+<!-- END: why-flutter-title -->
+  
+<div class="platforms"><div class="platform-card"><span aria-hidden="true" class="platform-icon">▯</span><h3>Android</h3><p>Mobile apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">◉</span><h3>iOS</h3><p>Mobile apps</p></div><div class="platform-card emphasized"><span aria-hidden="true" class="platform-icon">⌘</span><h3>Web</h3><p>Browser apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">▦</span><h3>Windows</h3><p>Desktop apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">▤</span><h3>macOS</h3><p>Desktop apps</p></div><div class="platform-card"><span aria-hidden="true" class="platform-icon">⌁</span><h3>Linux</h3><p>Desktop apps</p></div></div>
 <div class="content-card featured"><div><span class="micro-label">OUR LEARNING PATH</span><h3>We'll begin with Flutter on the web.</h3><p>We’ll use Chrome for the first Flutter run (Session 04). It’s a practical starting point for typical student laptops, without requiring an Android emulator immediately.</p></div><div aria-hidden="true" class="small-browser"><div class="browser-top"><i></i><i></i><i></i><span>localhost</span></div><div class="browser-ui"><div class="browser-title"></div><div class="browser-row"></div><div class="browser-row short"></div><div class="browser-button"></div></div></div></div>
 <div class="note caution"><span aria-hidden="true" class="note-icon">!</span><div><strong>Important distinction</strong><p>One shared codebase is not a promise of identical appearance, device features, or build tools on every platform. For example, producing an iOS app requires Apple-specific tools.</p></div></div>
 <div class="discussion"><span class="discussion-label">DISCUSS</span><h3>Why might a browser be a useful first target?</h3><p>Consider download size, laptop capabilities, and how quickly students can see their results.</p></div>
@@ -134,6 +501,173 @@
 <h1 id="section-4-title">Meet the <em>widgets.</em></h1>
 <p class="lead">A <strong>widget</strong> is a building block that describes part of a Flutter interface. A screen is built by combining smaller pieces, just like a page is composed of headings, images and buttons.</p>
 <div class="diagram-frame widget-graphic"><img alt="Simplified visual widget tree: App contains a screen, the screen contains a content layout and the layout contains a greeting and button. A preview phone appears alongside." height="345" src="images/widget-tree.svg" width="900"/><p class="diagram-caption">A simplified <strong>widget tree</strong>: smaller parts are nested inside larger parts. We’ll write actual Flutter widget code in later sessions.</p></div>
+<!-- BEGIN: ui-quality-title -->
+<section aria-labelledby="ui-quality-title" class="orientation-enrich">
+ <span class="enrich-label">
+  INTERFACE QUALITY
+ </span>
+ <h2 id="ui-quality-title">
+  High-quality interfaces, your design choices
+ </h2>
+ <p class="enrich-lead">
+  Flutter can draw detailed interfaces while offering reusable widgets, platform design styles and room for fully custom visuals.
+ </p>
+ <div class="ui-quality-cards">
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    01
+   </span>
+   <h3>
+    Fine control over pixels
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Flutter renders its interface with its own drawing system instead of relying on platform-provided controls.
+    </li>
+    <li>
+     Developers can customize shapes, spacing, colors and animation in detail.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    02
+   </span>
+   <h3>
+    Rich, reusable widget API
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Compose small widgets into larger screens and custom components.
+    </li>
+    <li>
+     Reuse those components to keep interfaces consistent and easier to maintain.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    03
+   </span>
+   <h3>
+    Faithful layouts
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Layout constraints and widget properties help reproduce a design accurately.
+    </li>
+    <li>
+     Complex arrangements can be built without depending on browser CSS layout rules.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    04
+   </span>
+   <h3>
+    Platform design choices
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Material follows Google-inspired interaction and visual patterns; Cupertino follows Apple-inspired patterns.
+    </li>
+    <li>
+     You can adapt to a platform or create a fully custom design.
+    </li>
+   </ul>
+  </article>
+  <article class="enrich-card">
+   <span aria-hidden="true" class="enrich-icon">
+    05
+   </span>
+   <h3>
+    Natural look &amp; feel
+   </h3>
+   <ul class="enrich-points">
+    <li>
+     Fonts, transitions, gestures and interaction feedback can match platform expectations.
+    </li>
+    <li>
+     Developers still decide how much their app should adapt between devices.
+    </li>
+   </ul>
+  </article>
+ </div>
+ <div class="enrich-visual">
+  <span class="enrich-label">
+   ONE WELCOME SCREEN &middot; THREE STYLES
+  </span>
+  <div aria-label="Three illustrative UI appearances with a common structure" class="ui-preview-row">
+   <div class="ui-style-preview">
+    <strong>
+     Material-inspired
+    </strong>
+    <div class="ui-mini-screen">
+     <div class="ui-mini-bar">
+      Welcome
+     </div>
+     <div class="ui-mini-main">
+      <span class="ui-mini-label">
+       Hello, student!
+      </span>
+      <div class="ui-mini-button">
+       Continue
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="ui-style-preview ios">
+    <strong>
+     Cupertino-inspired
+    </strong>
+    <div class="ui-mini-screen">
+     <div class="ui-mini-bar">
+      Welcome
+     </div>
+     <div class="ui-mini-main">
+      <span class="ui-mini-label">
+       Hello, student!
+      </span>
+      <div class="ui-mini-button">
+       Continue
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="ui-style-preview custom">
+    <strong>
+     Custom look
+    </strong>
+    <div class="ui-mini-screen">
+     <div class="ui-mini-bar">
+      Welcome
+     </div>
+     <div class="ui-mini-main">
+      <span class="ui-mini-label">
+       Hello, student!
+      </span>
+      <div class="ui-mini-button">
+       Continue
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <p class="enrich-visual-caption">
+   Original HTML illustrations, not real Flutter apps. Same content; different styling choices.
+  </p>
+ </div>
+ <p class="enrich-source">
+  Further reading:
+  <a href="https://docs.flutter.dev/resources/architectural-overview" rel="noopener noreferrer" target="_blank">
+   Flutter architectural overview
+  </a>
+ </p>
+</section>
+
+<!-- END: ui-quality-title -->
+
 <h2>Flutter is not limited to one visual style</h2><p class="body-intro">The <strong>Flutter core</strong> provides common building blocks. <strong>Material 3</strong> follows Google’s design language; <strong>Cupertino</strong> follows Apple’s. A developer can also create a custom style.</p>
 <div class="diagram-frame"><img alt="Three visual design choices—Material, Cupertino and custom style—built on Flutter's shared core widgets, engine and platform layer." height="285" src="images/design-systems.svg" width="900"/><p class="diagram-caption">Original simplified illustration based on current official Flutter UI documentation.</p></div>
 <div class="two-columns"><div class="content-card"><div class="micro-label">MATERIAL 3</div><h3>Google-inspired controls</h3><p>Commonly used for Android-style and general cross-platform interfaces.</p></div><div class="content-card"><div class="micro-label">CUPERTINO</div><h3>Apple-inspired controls</h3><p>Familiar iOS-style navigation, controls and interaction patterns.</p></div></div>
