@@ -591,3 +591,68 @@ body[data-theme="dark"] .dash-verified{background:#184d40;color:#adf9dc}
     font-size: .83rem;
   }
 }
+
+/* Add to the END of css/style.css. Existing 2-3-2 layout stays intact. */
+
+/* 2026 orientation additions. Self-contained styles, compatible with the existing theme. */
+.orientation-enrich{margin:27px 0 32px;scroll-margin-top:18px}
+.orientation-enrich .enrich-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.orientation-enrich h2{margin:6px 0 6px;font-size:clamp(1.27rem,2.35vw,1.7rem)}
+.orientation-enrich .enrich-lead{max-width:76ch;margin:0 0 17px;font-size:.91rem;color:var(--muted);line-height:1.66;text-align:justify;text-justify:inter-word}
+.orientation-enrich .enrich-label{font-size:.68rem;letter-spacing:.12em;font-weight:820;color:var(--accent2)}
+.enrich-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.enrich-card{position:relative;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px 16px 16px;box-shadow:0 4px 15px rgba(22,54,85,.025)}
+.enrich-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--pale);color:var(--accent);font-size:.85rem;font-weight:850;margin-bottom:10px}
+.enrich-card h3{font-size:.96rem;line-height:1.32;margin:0 0 6px}
+.enrich-card p{font-size:.8rem;line-height:1.6;color:var(--muted);margin:0;text-align:left}
+.enrich-grid .enrich-card:nth-child(4),.enrich-grid .enrich-card:nth-child(5){grid-column:span 1}
+.enrich-visual{margin-top:15px;border:1px solid var(--line);border-radius:16px;background:var(--paper2);padding:17px}
+.enrich-visual-caption{font-size:.71rem;color:var(--muted);margin:12px 0 0;line-height:1.55}
+.dart-compile-flow{display:grid;grid-template-columns:130px minmax(0,1fr);gap:18px;align-items:center}
+.dart-source-tag{text-align:center;border-radius:12px;border:1px solid #8fbfe3;background:var(--paper);padding:16px 8px;font-size:.78rem;font-weight:800;color:var(--accent)}
+.dart-lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dart-lane{padding:12px 13px;border:1px solid var(--line);border-radius:11px;background:var(--paper);min-width:0}
+.dart-lane strong{display:block;color:var(--ink);font-size:.84rem}
+.dart-lane span{display:block;color:var(--accent);font-weight:780;font-size:.72rem;margin:3px 0}
+.dart-lane small{color:var(--muted);font-size:.72rem;line-height:1.4;display:block}
+.flutter-benefit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.flutter-benefit-grid .enrich-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-content:center}
+.flutter-benefit-grid .enrich-card:first-child .enrich-icon{grid-row:1/3;margin:0}
+.flutter-benefit-grid .enrich-card:first-child h3{margin-bottom:5px}
+.flutter-platform-flow{display:flex;gap:9px;align-items:center;justify-content:space-evenly;flex-wrap:wrap}
+.flutter-code-pill{background:var(--accent);color:#fff;border-radius:11px;padding:11px 15px;font-size:.8rem;font-weight:790}
+.flutter-flow-arrow{font-size:1.4rem;color:var(--accent2);font-weight:900}
+.flutter-platform-pill{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:.75rem;font-weight:760;color:var(--ink)}
+.flutter-possibility-note{background:var(--paper2);border-left:3px solid var(--accent2);padding:12px 14px;margin:16px 0 0;border-radius:0 10px 10px 0;color:var(--ink);font-size:.78rem;line-height:1.6}
+.ui-quality-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.ui-preview-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch;margin-top:16px}
+.ui-style-preview{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:13px;text-align:center;min-width:0}
+.ui-style-preview>strong{display:block;margin-bottom:9px;font-size:.82rem;color:var(--ink)}
+.ui-mini-screen{margin:auto;max-width:170px;min-height:145px;overflow:hidden;border-radius:13px;border:1px solid #cddae6;background:#fff;color:#233445}
+.ui-mini-bar{background:#1879b8;height:39px;padding:10px;color:#fff;font-size:.7rem;font-weight:800}
+.ui-mini-main{padding:13px 8px 15px}
+.ui-mini-main .ui-mini-label{font-size:.73rem;display:block;font-weight:740}
+.ui-mini-main .ui-mini-button{margin:12px auto 0;max-width:110px;color:#fff;background:#1879b8;border-radius:18px;padding:8px 3px;font-size:.69rem;font-weight:760}
+.ui-style-preview.ios .ui-mini-screen{border-radius:19px;background:#f5f6fa}
+.ui-style-preview.ios .ui-mini-bar{background:#f5f6fa;border-bottom:1px solid #dadce4;color:#1268ce}
+.ui-style-preview.ios .ui-mini-button{background:#1268ce;border-radius:9px}
+.ui-style-preview.custom .ui-mini-screen{background:#fff9ed;border-radius:8px}
+.ui-style-preview.custom .ui-mini-bar{background:#8349b6}
+.ui-style-preview.custom .ui-mini-button{background:#8349b6;border-radius:3px}
+.orientation-enrich .enrich-source{font-size:.72rem;color:var(--muted);margin:11px 0 0}
+.orientation-enrich .enrich-source a{font-weight:700}
+@media(max-width:720px){.enrich-grid,.ui-quality-cards,.ui-preview-row{grid-template-columns:repeat(2,minmax(0,1fr))}.flutter-benefit-grid{grid-template-columns:1fr}.dart-compile-flow{grid-template-columns:1fr;gap:10px}.dart-lanes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.enrich-grid,.ui-quality-cards,.ui-preview-row{grid-template-columns:1fr}.dart-lanes{grid-template-columns:1fr}.flutter-platform-flow{gap:7px}.flutter-flow-arrow{transform:rotate(90deg)}.orientation-enrich .enrich-lead{text-align:left}.ui-mini-screen{max-width:200px}}
+
+
+/* Source-faithful teaching points: compact, scannable bullets */
+.orientation-enrich .enrich-points{list-style:none;padding:0;margin:7px 0 0;display:grid;gap:7px}
+.orientation-enrich .enrich-points li{position:relative;margin:0;padding-left:14px;font-size:.80rem;line-height:1.57;color:var(--muted);overflow-wrap:break-word}
+.orientation-enrich .enrich-points li::before{content:"";position:absolute;top:.62em;left:0;width:5px;height:5px;border-radius:50%;background:var(--accent2)}
+.orientation-enrich .enrich-points strong{color:var(--ink);font-weight:730}
+.orientation-enrich .enrich-card{padding:16px 16px 18px}
+.orientation-enrich .enrich-card h3{margin-bottom:8px}
+.orientation-enrich .flutter-benefit-grid .enrich-card:first-child{display:block;grid-column:auto}
+.orientation-enrich .flutter-benefit-grid .enrich-card:first-child .enrich-icon{margin-bottom:10px}
+@media(max-width:600px){.orientation-enrich .enrich-points li{font-size:.82rem;line-height:1.58}}
+
