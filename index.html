@@ -498,12 +498,74 @@
 </div>
 <!-- END WEB DEVELOPMENT → FLUTTER BRIDGE -->
 
-<div class="mini-simulation"><div><span class="micro-label">INTERACTIVE CONCEPT DEMO</span><h3>See how a UI change feels</h3><p>Flutter supports hot reload during development, helping developers see many code changes without restarting the entire app. Try an illustrative color change below.</p><button class="primary mini-demo-button" id="simulateChange" type="button">Simulate a color change <span aria-hidden="true">↻</span></button><p class="microcopy">Simulation only — this page is not running Flutter or demonstrating actual hot reload timing.</p></div><div aria-label="Preview panel" class="demo-tiles"><div class="demo-tile-top">Example app</div><div class="demo-tile-body"><div class="demo-tile-circle"></div><p>Welcome back!</p><div class="demo-tile-action" id="colorDemo">Continue</div></div></div></div>
+<!--<div class="mini-simulation"><div><span class="micro-label">INTERACTIVE CONCEPT DEMO</span><h3>See how a UI change feels</h3><p>Flutter supports hot reload during development, helping developers see many code changes without restarting the entire app. Try an illustrative color change below.</p><button class="primary mini-demo-button" id="simulateChange" type="button">Simulate a color change <span aria-hidden="true">↻</span></button><p class="microcopy">Simulation only — this page is not running Flutter or demonstrating actual hot reload timing.</p></div><div aria-label="Preview panel" class="demo-tiles"><div class="demo-tile-top">Example app</div><div class="demo-tile-body"><div class="demo-tile-circle"></div><p>Welcome back!</p><div class="demo-tile-action" id="colorDemo">Continue</div></div></div></div>-->
+
 <div class="note"><span aria-hidden="true" class="note-icon">↗</span><div><strong>Looking ahead</strong><p>In the next sessions, you'll install your tools, practice Dart, then run an actual Flutter app. Today's preview is conceptual only.</p></div></div>
 </section>
 <!-- SECTION 07 -->
 <section aria-labelledby="section-6-title" class="lesson-step" data-panel="6" hidden="">
 <div class="step-meta"><span class="eyebrow">SECTION 07 · YOUR SYLLABUS</span><span class="time-tag">◷ 25 MIN</span></div><h1 id="section-6-title">The course at<br/><em>a glance.</em></h1><p class="lead">SICT235 is a third-semester PDB2 course. It follows progressive project-based learning: each topic prepares you to build more complete apps.</p>
+
+<!-- Paste this inside Section 07 after the introductory paragraph. -->
+<style>
+/* Complete official course plan: main syllabus resource */
+.course-plan-welcome-link { margin: 12px 0 18px; font-weight: 700; font-size: .9rem; }
+.course-plan-welcome-link a { text-underline-offset: 4px; }
+.course-plan-card { margin: 25px 0 28px; padding: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
+.course-plan-card-heading { display: flex; align-items: flex-start; gap: 18px; }
+.course-plan-file-icon { flex: 0 0 58px; width: 58px; height: 72px; border: 2px solid #d79e7b; background: #fff7f1; color: #943e1a; border-radius: 9px; display: grid; place-items: center; font-size: 1rem; font-weight: 900; letter-spacing: .04em; box-shadow: 3px 3px 0 #f1dfd5; }
+.course-plan-card-copy { flex: 1; min-width: 0; }
+.course-plan-card-copy h2 { margin: 5px 0 9px; font-size: clamp(1.25rem,2.2vw,1.65rem); }
+.course-plan-card-copy p { margin: 0 0 7px; color: var(--ink); line-height: 1.7; text-align: justify; text-justify: inter-word; hyphens: auto; }
+.course-plan-meta { color: var(--muted); font-size: .78rem; }
+.course-plan-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 16px; }
+.course-plan-actions a { display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: .88rem; text-decoration: none; transition: transform .12s ease, box-shadow .12s ease; }
+.course-plan-actions a:hover { transform: translateY(-1px); text-decoration: none; }
+.course-plan-actions a:focus-visible, .course-plan-details summary:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
+.course-plan-primary { color: #fff !important; background: var(--accent); }
+.course-plan-secondary { border: 1px solid var(--line); color: var(--accent) !important; background: var(--paper2); }
+.course-plan-details { border-top: 1px solid var(--line); padding-top: 13px; }
+.course-plan-details summary { list-style: none; cursor: pointer; font-weight: 720; color: var(--accent); font-size: .9rem; }
+.course-plan-details summary::-webkit-details-marker { display: none; }
+.course-plan-details summary span { display: inline-block; margin-left: 4px; transition: transform .15s ease; }
+.course-plan-details[open] summary span { transform: rotate(180deg); }
+.course-plan-preview { margin-top: 13px; }
+.course-plan-preview iframe { display: block; width: 100%; height: min(74vh,700px); min-height: 430px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper2); }
+.course-plan-fallback { margin: 9px 0 0; color: var(--muted); font-size: .77rem; line-height: 1.5; }
+@media(max-width:600px){
+  .course-plan-card { padding: 16px; margin: 20px 0; }
+  .course-plan-card-heading { gap: 12px; }
+  .course-plan-file-icon { flex-basis: 42px; width: 42px; height: 55px; font-size: .74rem; }
+  .course-plan-actions { flex-direction: column; }
+  .course-plan-actions a { width: 100%; }
+  .course-plan-preview iframe { min-height: 330px; height: 56vh; }
+}
+
+</style>
+<div class="course-plan-card" id="official-course-plan">
+<div class="course-plan-card-heading">
+<div aria-hidden="true" class="course-plan-file-icon">PDF</div>
+<div class="course-plan-card-copy">
+<span class="micro-label">OFFICIAL COURSE DOCUMENT · 2026–2027</span>
+<h2>Complete Course Plan &amp; Syllabus</h2>
+<p>Read the original <strong>SICT235 — Mobile Applications Development Using Flutter</strong> course outline, including objectives, the week-by-week roadmap, assessment policy, and learning references.</p>
+<span class="course-plan-meta">3 pages · Official UNRWA / Gaza Training Centre course outline</span>
+</div>
+</div>
+<div class="course-plan-actions">
+<a class="course-plan-primary" href="resources/Flutter_Plan_26-27.pdf" rel="noopener noreferrer" target="_blank" type="application/pdf">↗ Open full course plan</a>
+<a class="course-plan-secondary" download="Flutter_Plan_26-27.pdf" href="resources/Flutter_Plan_26-27.pdf" type="application/pdf">↓ Download PDF</a>
+</div>
+<details class="course-plan-details">
+<summary>Preview the syllabus here <span aria-hidden="true">▾</span></summary>
+<div class="course-plan-preview">
+<iframe loading="lazy" src="resources/Flutter_Plan_26-27.pdf#toolbar=1&amp;navpanes=0" title="Official SICT235 course outline, 2026–2027 (3-page PDF)"></iframe>
+<p class="course-plan-fallback">If the PDF preview is unavailable on your device, use <a href="resources/Flutter_Plan_26-27.pdf" rel="noopener noreferrer" target="_blank">Open full course plan</a> above.</p>
+</div>
+</details>
+</div>
+
+  
 <div class="three-metrics syllabus-metrics"><div><strong>14</strong><span>Teaching weeks</span></div><div><strong>42</strong><span>Teaching sessions</span></div><div><strong>15–16</strong><span>Final assessment weeks</span></div></div>
 <h2>Learning journey</h2>
 <h2>Our first four sessions</h2>
