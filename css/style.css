@@ -107,3 +107,57 @@ body[data-theme="dark"] .dash-verified{background:#184d40;color:#adf9dc}
 @media(max-width:1000px){.book-grid{grid-template-columns:1fr}.book-cover{flex-basis:123px}}
 @media(max-width:600px){.library-heading{align-items:start;flex-direction:column}.book-card{gap:12px;padding:12px}.book-cover{flex-basis:99px;min-height:170px;padding:13px 9px 12px 13px}.book-cover-title{font-size:.79rem}.book-cover-badge,.book-cover-brand{font-size:.45rem}.book-card h3{font-size:.93rem}.book-meta{font-size:.68rem}.book-purpose{font-size:.76rem}.book-reading-path{padding:13px 12px}}
 @media(max-width:365px){.book-card{flex-direction:column}.book-cover{width:116px;min-height:150px;flex-basis:auto}}
+
+
+/* WHY DART — 2 / 3 / 2 CARD LAYOUT */
+
+.orientation-enrich[aria-labelledby="why-dart-title"] > .enrich-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* First row: 2 cards */
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(1),
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+/* Second row: 3 cards */
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(3),
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(4),
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(5) {
+  grid-column: span 2;
+}
+
+/* Third row: 2 cards */
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(6),
+.orientation-enrich[aria-labelledby="why-dart-title"]
+.enrich-card:nth-child(7) {
+  grid-column: span 3;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .orientation-enrich[aria-labelledby="why-dart-title"] > .enrich-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .orientation-enrich[aria-labelledby="why-dart-title"]
+  .enrich-card:nth-child(n) {
+    grid-column: span 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .orientation-enrich[aria-labelledby="why-dart-title"] > .enrich-grid {
+    grid-template-columns: 1fr;
+  }
+}
