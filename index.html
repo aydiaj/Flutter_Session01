@@ -499,7 +499,142 @@
 <!-- END WEB DEVELOPMENT → FLUTTER BRIDGE -->
 
 <!--<div class="mini-simulation"><div><span class="micro-label">INTERACTIVE CONCEPT DEMO</span><h3>See how a UI change feels</h3><p>Flutter supports hot reload during development, helping developers see many code changes without restarting the entire app. Try an illustrative color change below.</p><button class="primary mini-demo-button" id="simulateChange" type="button">Simulate a color change <span aria-hidden="true">↻</span></button><p class="microcopy">Simulation only — this page is not running Flutter or demonstrating actual hot reload timing.</p></div><div aria-label="Preview panel" class="demo-tiles"><div class="demo-tile-top">Example app</div><div class="demo-tile-body"><div class="demo-tile-circle"></div><p>Welcome back!</p><div class="demo-tile-action" id="colorDemo">Continue</div></div></div></div>-->
+<style>
+/* Session 01: phone UI demo patch */
+.mini-simulation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 295px);
+  align-items: center;
+  gap: clamp(22px, 4vw, 42px);
+  width: 100%;
+  margin: 26px 0;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-sizing: border-box;
+}
+.mini-simulation-copy { min-width: 0; }
+.mini-simulation-copy h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); margin: 10px 0 12px; }
+.mini-simulation-copy .mini-simulation-description,
+.mini-simulation-copy .mini-simulation-note {
+  max-width: 52ch;
+  line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.mini-simulation-copy .mini-simulation-note { font-size: .8rem; margin: 16px 0 0; }
+.mini-simulation-copy .mini-demo-button { margin: 20px 0 0; }
+.demo-phone-stage { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 11px; min-width: 0; }
+.demo-phone {
+  width: min(100%, 250px);
+  aspect-ratio: 250 / 475;
+  border: 8px solid #203247;
+  border-radius: 37px;
+  background: #fff;
+  box-shadow: 0 18px 30px rgba(20, 43, 69, .19), 0 3px 8px rgba(20, 43, 69, .12);
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.demo-phone-screen {
+  height: 100%; width: 100%; overflow: hidden;
+  border-radius: 25px; background: #f8fbff; color: #172b40;
+  display: flex; flex-direction: column; position: relative;
+}
+.demo-phone-status {
+  height: 30px; padding: 7px 15px 2px;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  font-size: 10px; font-weight: 800; color: #1b3044;
+}
+.demo-phone-status-icons { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; }
+.demo-phone-appbar {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 51px; flex-shrink: 0; padding: 0 16px;
+  background: #1b70b7; color: #fff; transition: background .22s ease;
+}
+.demo-phone-appbar strong { font-size: 13px; font-weight: 750; }
+.demo-phone-appbar > span { font-size: 22px; line-height: 1; }
+.demo-phone-main {
+  flex: 1; min-height: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 18px 15px 20px; text-align: center;
+}
+.demo-phone-avatar {
+  display: grid; place-items: center; width: 76px; height: 76px;
+  flex: 0 0 76px; border-radius: 50%; margin-bottom: 17px;
+  font-size: 30px; background: #deeffc; color: #287cba;
+  transition: background .22s ease, color .22s ease;
+}
+.demo-phone-main h4 { margin: 0; font-size: 17px; line-height: 1.4; }
+.demo-phone-main p { margin: 9px 0 20px; color: #647a8f; line-height: 1.45; font-size: 11.5px; }
+.demo-phone .demo-tile-action {
+  display: grid; place-items: center; width: 84%; height: 43px;
+  margin: 0; padding: 0 8px; box-sizing: border-box; border-radius: 10px;
+  background: #1b70b7; color: #fff; font-size: 12px; font-weight: 760;
+  transition: background .22s ease;
+}
+.demo-phone.color-alt .demo-phone-appbar,
+.demo-phone.color-alt .demo-tile-action { background: #8651b1; }
+.demo-phone.color-alt .demo-phone-avatar { background: #f0e5ff; color: #8651b1; }
+.demo-phone-tabs {
+  display: flex; justify-content: space-around; align-items: center;
+  height: 54px; flex-shrink: 0; border-top: 1px solid #e1eaf3; background: #fff;
+}
+.demo-phone-tabs span { display: flex; flex-direction: column; align-items: center; gap: 2px; color: #7891a7; font-size: 16px; line-height: 1; }
+.demo-phone-tabs span.active { color: #1b70b7; }
+.demo-phone-tabs small { font-size: 9px; }
+.demo-phone-home { width: 72px; height: 4px; flex-shrink: 0; border-radius: 10px; background: #203247; margin: 5px auto 7px; }
+.demo-phone-caption { margin: 0; color: var(--muted); font-size: .74rem; text-align: center; }
+@media (max-width: 800px) {
+  .mini-simulation { grid-template-columns: 1fr; }
+  .mini-simulation-copy .mini-simulation-description,
+  .mini-simulation-copy .mini-simulation-note { max-width: none; }
+  .demo-phone { width: min(100%, 250px); }
+}
+@media (max-width: 430px) {
+  .mini-simulation { padding: 19px 14px; gap: 18px; }
+  .mini-simulation-copy .mini-demo-button { width: 100%; }
+}
 
+.demo-phone:has(#colorDemo.color-alt) .demo-phone-appbar,
+.demo-phone:has(#colorDemo.color-alt) .demo-tile-action {background:#8651b1;}
+.demo-phone:has(#colorDemo.color-alt) .demo-phone-avatar {background:#f0e5ff;color:#8651b1;}
+
+</style>
+<div class="mini-simulation" aria-label="Interactive Flutter concept demonstration">
+  <div class="mini-simulation-copy">
+    <span class="micro-label">INTERACTIVE CONCEPT DEMO</span>
+    <h3>See how a UI change feels</h3>
+    <p class="mini-simulation-description">Flutter supports hot reload during development, helping developers see many code changes without restarting the entire app. Try an illustrative color change and observe the mobile interface.</p>
+    <button class="primary mini-demo-button" id="simulateChange" type="button">Simulate a color change <span aria-hidden="true">↻</span></button>
+    <p class="microcopy mini-simulation-note">Simulation only.</p>
+  </div>
+  <div class="demo-phone-stage" aria-label="Illustrative mobile application preview">
+    <div class="demo-phone">
+      <div class="demo-phone-screen">
+        <div class="demo-phone-status" aria-hidden="true">
+          <span>9:41</span>
+          <span class="demo-phone-status-icons">▂▃▅ <svg viewBox="0 0 24 16" width="18" height="13" aria-hidden="true"><rect x="1" y="3" width="19" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="5.5" width="13" height="5" rx="1" fill="currentColor"/><rect x="21" y="6" width="2" height="4" rx="1" fill="currentColor"/></svg></span>
+        </div>
+        <div class="demo-phone-appbar"><span aria-hidden="true">‹</span><strong>Welcome App</strong><span aria-hidden="true">⋮</span></div>
+        <div class="demo-phone-main">
+          <div class="demo-phone-avatar" aria-hidden="true">✦</div>
+          <h4>Welcome back!</h4>
+          <p>Ready for your next lesson?</p>
+          <div class="demo-tile-action" id="colorDemo" aria-live="polite">Continue</div>
+        </div>
+        <div class="demo-phone-tabs" aria-hidden="true">
+          <span class="active">⌂ <small>Home</small></span>
+          <span>▦ <small>Explore</small></span>
+          <span>○ <small>Profile</small></span>
+        </div>
+        <div class="demo-phone-home" aria-hidden="true"></div>
+      </div>
+    </div>
+    <p class="demo-phone-caption">Illustrative mobile app preview</p>
+  </div>
+</div>
 <div class="note"><span aria-hidden="true" class="note-icon">↗</span><div><strong>Looking ahead</strong><p>In the next sessions, you'll install your tools, practice Dart, then run an actual Flutter app. Today's preview is conceptual only.</p></div></div>
 </section>
 <!-- SECTION 07 -->
